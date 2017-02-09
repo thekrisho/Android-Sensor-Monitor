@@ -48,11 +48,11 @@ import android.content.Intent;
 public class MainActivity extends AppCompatActivity implements SensorEventListener{ //Register to listen to sensor events. When sensor avail, you get a call back
 
     //Declarations
-    TextView textView;
     private SensorManager sensorManager;
     private Sensor acceleration;
     private TextView textX;
     private TextView Event;
+    public TextView outputView;
     public static Button get_button;
     public static Button post_button;
     public long LastUpdate = 1;
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         // Define Variables
         textX = (TextView) findViewById(R.id.textView);
         Event = (TextView) findViewById(R.id.textView2);
-        textView = (TextView)findViewById(R.id.textView4);
+        outputView = (TextView)findViewById(R.id.textView4);
         get_button = (Button) findViewById(R.id.button_get);
         post_button = (Button) findViewById(R.id.button_post);
 
@@ -119,7 +119,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
                 // Variables for storing output response
                 String response = "";
-                final String finalResponse = response;
                 BufferedReader buff = new BufferedReader(new InputStreamReader(connection.getInputStream())); ;
                 final TextView outputView = (TextView) findViewById(R.id.textView4); // Reference variable for output textview
 
@@ -130,6 +129,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 }
                 buff.close();
 
+                final String finalResponse = response;
                 // Display output response on separate thread (UI Thread)
                 MainActivity.this.runOnUiThread(new Runnable() {
                     public void run() { outputView.setText(finalResponse); }
