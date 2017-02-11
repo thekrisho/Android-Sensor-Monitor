@@ -10,6 +10,6 @@ Dependencies:
 
 Ngrok: A simple tool that allows you to forward your server and port to a public address without port forwarding https://ngrok.com . I highly recommend using this as it easy, fast, and free.
 
-Tomcat 9.0: You can install tomcat on mac or windows just remember that in order to see changes you need to restart the server everytime. Make sure you can do this easily during development
+Tomcat 9.0: You can install tomcat on mac or windows just remember that in order to see changes you need to restart the server everytime. Make sure you can do this easily during development. http://tomcat.apache.org
 
 JDBC Servlet: Since we can't directly access the database with HTML, we are using java to run sql staments and java system out to run a mini HTML servlet. Please see my repository for my detail on that https://github.com/thekrisho/JDBC-Servlet
