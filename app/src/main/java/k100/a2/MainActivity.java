@@ -66,7 +66,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public String Field_1 = "F1";
     public String Field_2 = "F2";
 
-    // PLACE TOMCAT SERVER OR TUNNLED ADDRESS HERE
+    // PLACE TOMCAT SERVER OR TUNNLED ADDRESS HERE!!!
+    // DONT FORGET "http://" OR YOU MAY HAVE ISSUES
     public String Server_URL = "";
 
     @Override
@@ -110,12 +111,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             try {
                 // DEFINE POST or GET components:
                 //  - Http POST format: Server_URL ? first_fieldname = "string value 1" + second_filedname = "string value 2"
-                //  - Http GET format: Server_URL ? first_fieldname = "string value 1" + second_filedname = "string value 2"
+                //  - Http GET format: Server_URL
                 URL url = new URL(Server_URL + "?time=" + Field_1 + "&event=" + Field_2);
 
                 // Open HTTP Connection
                 HttpURLConnection connection = (HttpURLConnection)url.openConnection();
-                connection.setRequestMethod(Request_Type);
+                connection.setRequestMethod(Request_Type); // POST or GET
 
                 // Variables for storing output response
                 String response = "";
