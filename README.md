@@ -15,5 +15,5 @@ Tomcat 9.0: You can install tomcat on mac or windows just remember that in order
 JDBC Servlet: Since we can't directly access the database with HTML, we are using java to run sql staments and java "system.out" to run a mini HTML servlet. Please see my repository for more detail on that https://github.com/thekrisho/JDBC-Servlet
 
 Tips:
-- DONT FORGET TO ADD PERMISSIONS FOR INTERNET SOMEWHERE IN THE MANIFEST: "<uses-permission android:name="android.permission.INTERNET"></uses-permission>"
+- DONT FORGET TO ADD PERMISSIONS FOR INTERNET SOMEWHERE IN THE MANIFEST: uses-permission android:name="android.permission.INTERNET"
 - DONT FORGET "http://" BEFORE YOUR SERVER URL OF YOU MAY ENCOUNTER PROBLEMS
