@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     // PLACE TOMCAT SERVER OR TUNNLED ADDRESS HERE!!!
     // DONT FORGET "http://" OR YOU MAY HAVE ISSUES
-    public String Server_URL = "";
+    public String Server_URL = "http://localhost:8080"; // or your hostname 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
